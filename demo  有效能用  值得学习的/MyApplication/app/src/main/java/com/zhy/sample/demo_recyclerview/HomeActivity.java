@@ -52,6 +52,31 @@ public class HomeActivity extends ActionBarActivity
 
 	}
 
+    class MyOnItemClickListener implements OnItemClickLitener{
+
+        private HomeAdapter adapter;
+
+        public MyOnItemClickListener(HomeAdapter adapter){
+            this.adapter = adapter;
+        }
+
+        @Override
+        public void onItemClick(View view, int position)
+        {
+            Toast.makeText(HomeActivity.this, position + " click",
+                    Toast.LENGTH_SHORT).show();
+        }
+
+        @Override
+        public void onItemLongClick(View view, int position)
+        {
+            Toast.makeText(HomeActivity.this, position + " long click",
+                    Toast.LENGTH_SHORT).show();
+
+
+        }
+    }
+
 	private void initEvent()
 	{
 		mAdapter.setOnItemClickLitener(new OnItemClickLitener()
@@ -68,6 +93,8 @@ public class HomeActivity extends ActionBarActivity
 			{
 				Toast.makeText(HomeActivity.this, position + " long click",
 						Toast.LENGTH_SHORT).show();
+
+
 			}
 		});
 	}
