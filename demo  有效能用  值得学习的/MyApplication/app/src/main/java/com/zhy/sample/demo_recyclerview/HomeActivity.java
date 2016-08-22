@@ -40,10 +40,14 @@ public class HomeActivity extends ActionBarActivity
 				StaggeredGridLayoutManager.VERTICAL));
 		mRecyclerView.setAdapter(mAdapter);
 
+		// 设置分割线
 		mRecyclerView.addItemDecoration(new DividerGridItemDecoration(this));
+
 		// 设置item动画
 		mRecyclerView.setItemAnimator(new DefaultItemAnimator());
 
+
+		// 设置点击事件
 		initEvent();
 
 	}

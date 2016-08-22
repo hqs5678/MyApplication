@@ -71,7 +71,6 @@ class HomeAdapter extends RecyclerView.Adapter<HomeAdapter.MyViewHolder>
 				{
 					int pos = holder.getLayoutPosition();
 					mOnItemClickLitener.onItemLongClick(holder.itemView, pos);
-					removeData(pos);
 					return false;
 				}
 			});
