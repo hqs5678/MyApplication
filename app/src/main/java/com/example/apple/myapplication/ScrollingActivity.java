@@ -186,7 +186,6 @@ class SimpleItemDecoration extends RecyclerView.ItemDecoration {
             final int right = left + mDivider.getIntrinsicHeight();
             mDivider.setBounds(10, 10, 10, 10);
             mDivider.draw(c);
-
         }
     }
 
@@ -198,7 +197,6 @@ class SimpleItemDecoration extends RecyclerView.ItemDecoration {
             outRect.set(0, 0, 0, mDivider.getIntrinsicHeight());
         } else {
             outRect.set(0, 0, mDivider.getIntrinsicWidth(), 0);
-            outRect.set(0, 0, 100, 0);
         }
     }
 
