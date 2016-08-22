@@ -89,23 +89,33 @@ public class HomeActivity extends ActionBarActivity
 	{
 		switch (item.getItemId())
 		{
+			// 添加菜单
 		case R.id.id_action_add:
 			mAdapter.addData(1);
 			break;
+
+		// 删除菜单
 		case R.id.id_action_delete:
 			mAdapter.removeData(1);
 			break;
+
+		// gridView
 		case R.id.id_action_gridview:
 			mRecyclerView.setLayoutManager(new GridLayoutManager(this, 4));
 			break;
+
+		// listView
 		case R.id.id_action_listview:
 			mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
 			break;
+
+		// 水平gridview
 		case R.id.id_action_horizontalGridView:
 			mRecyclerView.setLayoutManager(new StaggeredGridLayoutManager(4,
 					StaggeredGridLayoutManager.HORIZONTAL));
 			break;
 
+		// 瀑布流
 		case R.id.id_action_staggeredgridview:
 			Intent intent = new Intent(this , StaggeredGridLayoutActivity.class);
 			startActivity(intent);
